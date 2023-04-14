@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/ap.jpg" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Software Engineer</p>
+            <h1>Hi,I'm <span>Ankit</span><br>  Patidar from Ujjain</h1>
+        </div>
+    </div>
+</div>
+<!------------------ about ----------------->
+<div id="about">
+    <div class="container"></div>
+    <div class="row">
+        <div class="about-col-1">
+            <img src="images/ankit.jpg">
+        </div>
+        <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1><br>
+            <p><b> Hi my name is Ankit Patidar currently i am pursuing my B.Tech  from Shri Vaishnav Vidyapeeth Vishwavidylaya Indore.<br>
+                    currently i am in 3rd year/6th Sem.<br>
+                   I am from Ujjain District, but currently Living in indore for my studies.<br>
+                   My Strengths are Honest and Loyal, Good Thinking Ability.<br>
+                   My area of improvement is that i am a Introvert Person.<br>
+                   My Hobbies are Listening Music, Cricket, watching movies.<br>
+                </b>
+            </p><br>
+
+                
+               
+
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p> 
+            </div>  
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+            <li><span>Languages</span><br>C/c++, Python</li>
+            <li><span>Web Development</span><br>HTML, CSS, PHP, MYSQL</li>
+            <li><span>IT Skills</span><br>DSA, OOPS</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+            <li><span><b>FRESHER</b></span>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul> 
+            <li><span>10th grade</span><br>64%(CBSE)</li>
+            <li><span>12th grade</span><br>82%(CBSE)</li>
+            <li><span>current college CGPA</span><br>7.5</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------- Services ------------------->
+
+<!--------------------- portfolio ------------------->
+<div id="portfolio">
+<div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+       <div class="work">
+         <img src="images/food.jpeg">
+         <div class="layer">
+            <h3>Online Food Ordering website</h3>
+            <p>It is online website for Ordering a food from your table in a reastaurant.</p>
+            <a href="http://localhost/food-order/"><i class="fa-solid fa-up-right-from-square"></i></a>
+         </div>
+       </div>
+       <div class="work">
+         <img src="images/calorie.png">
+         <div class="layer">
+            <h3>Calorie Tracker</h3>
+            <p>This Website shows that how much calorie you consume in a day.</p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+         </div>
+       </div>
+       <div class="work">
+         <img src="images/work-3.png">
+         <div class="layer">
+            <h3>Online Shopping Website</h3>
+            <p>It is the simple respresentation of frontend of an Shopping website using HTML and CSS.</p>
+            <a href="file:///C:/Users/ankit/OneDrive/Desktop/shopping%20website/index.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+         </div>
+       </div>
+      </div>
+   </div>
+</div>
+<!-- ------------------contact ------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                 <h1 class="sub-title">Contact Me</h1>
+                 <p><i class="fa-sharp fa-solid fa-paper-plane"></i> ankitpatidar102001@gmail.com</p>
+                 <p><i class="fa-solid fa-phone"></i> 7024827997</p>
+                 <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/ankit-patidar-353102248" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/_ankit__patidar___/" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="ankitpatidar102001@gmail.com" class="fa fa-google"></a>
+                    
+                    
+                
+                 </div>
+                 <a href="images/ankit resume(2).docx" download="" class="btn btn2">Download Resume</a>
+            </div>
+            
+    </div>
+    <div class="copyright">
+        <p>copyright @ Ankit . Made with <i class="fa fa-heart-o" style="font-size:15px;color:red"></i></p>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+     
+    function opentab(tabname) {
+        for(tablink of tablinks){
+           tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+           tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
